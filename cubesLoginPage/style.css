@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+/* Main Constant Features */
+.main {
+    display: grid;
+}
+.login-section{
+    /* Do not resposive, Constant features */
+    text-align: center;
+    /* background-color: #141419; */
+    background-color: #242436;
+}
+.login-section a {
+    color: white;
+}
+.image-section {
+    overflow: hidden; 
+}
+
+/* CONSTANTS -> LOGIN-SECTION CHL */
+.title h1{
+    /* text-shadow:  */
+    /* 3px 5px rgb(88, 88, 173) */
+    /* ,4.5px 8px 10px rgba(212, 88, 181, 0.4) */
+    /* ; */
+    font-size: 3.5em;
+}
+.title{
+    margin-bottom: 10%;
+}
+.back{
+    /* position: relative; */
+    /* text-align: left; */
+    /* margin-left: 20px; */
+    /* margin-top: 20px; */
+    display: flex;
+    align-items: center;
+    background: none;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.back i {
+    font-size: 2em;
+}
+.back span{
+    font-size: 1.2em;
+}
+.social-media-login{
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 50px; */
+}
+.social-media-icon .uil {
+    font-size: 4em;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: white;
+    /* text-shadow: 
+    3px 5px rgb(88, 88, 173) */
+    /* ,4.5px 8px 10px rgba(212, 88, 181, 0.4) */
+    /* ;    */
+}
+.social-media-icon .uil:hover{
+    text-shadow: 3px 5px rgb(88, 88, 173);
+    cursor: pointer;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 960px) {
+    .main{
+        grid-template-columns: 1fr 1fr;
+    }
+    .image-section {
+        height: 100vh; /*I have to review the necessity of this here on on its child*/
+        background-color: rgb(81, 157, 245);
+        /* overflow: hidden; */
+    }
+    .login-form{
+        max-width: 400px;
+    }
+    .login-form> input{
+        font-size: 1em;
+    }
+    footer {
+        position: fixed;
+        left: 50%;
+        bottom: 0;
+        right: 0;
+        margin: 30px;
+     }
+     
+}
+@media (max-width: 960px) {
+    .main{
+        grid-template-columns: 0 1fr;
+    }
+    .login-section {
+        height: 100vh;
+    }
+    .image-section {
+        visibility: hidden;
+    }
+    .login-form{
+        width: 80%;
+        max-width: 400px;
+    }
+    .login-form> input{
+        font-size: 1em;
+    }
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 30px;
+     }
+}
+
+
+
+
+
+.image-section img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-height: 100%;
+}
+
+
+
+
+.login-form>input{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: .5em;
+    border-radius: .2em;
+    border-style: none;
+}
+
+.login-form>span{
+    color: white;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 5px 0;
+}
+.login-form>input[type=email], .login-form>input[type=password] {
+    margin-bottom: .8rem;
+}
+.login-form>input[type=email]:focus, .login-form>input[type=password]:focus {
+    outline: none;
+    box-shadow: 0 0 2px 3px rgb(80, 80, 156);
+}
+
+.login-form>input[type=submit]{
+    margin: 1rem 0; /* 0 to make the submit width fit the same as the other inputs*/
+    cursor: pointer;
+    font-weight: 500;
+    background-color:rgb(80, 60, 201);
+    font-size: 1.2em;
+    color: #f0f0f0;
+
+    /* Effects */
+
+    box-shadow: 0 4px 2px rgb(88, 88, 173);
+    transition: .05s ease-out;
+}
+
+.login-form>input[type=submit]:active{
+    transform: translate(0,3px);
+    box-shadow: 0 0px 2px rgb(88, 88, 173);
+    
+
+}
